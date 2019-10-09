@@ -4,7 +4,6 @@
 
 import sys
 
-
 numbers = [
     "1",
     "2",
@@ -109,18 +108,19 @@ numbers = [
 ]
 
 
-def main():
-
+def print():
     for number in range(len(numbers)):
-        
+
         output = ""
         for n in range(len(numbers[number])):
-            
             output = str(output + str(numbers[number][n]))
         print("{}".format(int(output)))
 
 
-if __name__ == "__main__":
+def main():
+    print()
 
+
+if __name__ == "__main__":
     main()
     sys.exit()
