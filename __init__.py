@@ -4,6 +4,7 @@
 
 import sys
 from termcolor import colored
+import numpy
 
 #count array
 numbers = [
@@ -109,21 +110,40 @@ numbers = [
     "100"
 ]
 
+sortnumber = []
+
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
 
 def print():
-
     #print counted numbers in array
     for number in range(len(numbers)):
-
         output = ""
         for n in range(len(numbers[number])):
             output = str(output + str(numbers[number][n]))
         #print in terminal
-        print colored("{}".format(int(output)),'red')
+        print colored("{}".format(int(output)),"red")
 
+def print2():
+    sortnumber = quicksort(numbers)
+
+    #print counted numbers in array
+    for sortnumber in range(len(sortnumber)):
+        output = ""
+        for n in range(len(numbers[sortnumber])):
+            output = str(output + str(numbers[sortnumber][n]))
+        #print in terminal
+        print colored("{}".format(int(output)),"red")
 
 def main():
     print()
+    print2()
 
 
 if __name__ == "__main__":
