@@ -4,6 +4,7 @@
 
 import sys
 
+#count array
 numbers = [
     "1",
     "2",
@@ -109,11 +110,14 @@ numbers = [
 
 
 def print():
+
+    #print counted numbers in array
     for number in range(len(numbers)):
 
         output = ""
         for n in range(len(numbers[number])):
             output = str(output + str(numbers[number][n]))
+        #print in terminal
         print("{}".format(int(output)))
 
 
