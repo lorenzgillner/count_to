@@ -3,6 +3,7 @@
 
 
 import sys
+from termcolor import colored
 
 #count array
 numbers = [
@@ -118,7 +119,7 @@ def print():
         for n in range(len(numbers[number])):
             output = str(output + str(numbers[number][n]))
         #print in terminal
-        print("{}".format(int(output)))
+        print colored("{}".format(int(output)),'red')
 
 
 def main():
