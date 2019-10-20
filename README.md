@@ -1,3 +1,3 @@
-# Count_to_one_hundred
+# count\_to
 
-counts to 100
+Print numbers from 1 to N in a very inefficient way.
