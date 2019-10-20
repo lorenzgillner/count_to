@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: count_to",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/count_to",
+            "console": "integratedTerminal",
+            "args": [
+                "${input:N}"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "N",
+            "description": "The number you want to count to.",
+            "default": "100",
+            "type": "promptString"
+        }
+    ]
+}
